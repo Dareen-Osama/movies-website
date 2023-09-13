@@ -1,0 +1,524 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: linear-gradient(to left, #0c1c39, #4b6979, #374b6c);
+    background-attachment: fixed;
+    background-repeat: unset;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+
+
+    /* background-color: #4b6979;*/
+}
+
+nav {
+    width: 100%;
+    overflow: auto;
+    background: lightgray;
+    flex: content;
+}
+
+ nav ul {
+    padding: 0;
+    margin: 0 0 0 250px;
+    list-style: none;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    width: 100px;
+    padding: 20px 15px;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    color: #213555;
+    text-align: center;
+    font-weight: bolder;
+    margin-left: 95px;
+    font-size: 20px;
+}
+
+button {
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+    background-color: #213555;
+    font-family: 'Times New Roman', Times, serif;
+    color: #F0F0F0;
+    font-weight: bold;
+    font-size: 20;
+    border: 0.5cm black;
+    margin-left: 150px;
+    border-radius: 5px;
+
+}
+
+button:hover {
+    background: #F0F0F0;
+    color: #213555;
+}
+
+
+li a:hover {
+    color: #F0F0F0;
+}
+
+.logo img {
+    position: absolute;
+    margin-top: 3px;
+    margin-left: 10px;
+    height: 55px;
+    width: 64PX;
+
+}
+
+.logo h2 {
+    position: absolute;
+    margin-top: 1px;
+    height: 58px;
+    margin-left: 26px;
+    padding-left: 60px;
+    width: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3CM;
+
+}
+
+.FCh {
+    color: #F0F0F0;
+    text-shadow: 2px 10px 11px #213555;
+}
+
+.otherCh {
+    text-shadow: 2px 10px 11px #213555;
+}
+
+/*
+.menuB {
+    font-size: 30px;
+    color: #0c1c39;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+.menuB  {
+    display: none;
+    overflow: hidden;
+}
+
+@media (max-width : 952px) {
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+@media (max-width : 952px) {
+    .menuB{
+        display: block;
+    }
+    ul{
+ position: fixed;
+ width: 100%;
+ height: 100vh;
+ background: lightgray;
+ top: 80px;
+ left: 0;
+
+    }
+    nav ul li {
+        display: block;
+        
+    }
+    nav ul li a{
+        font-size: 20px;
+
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0c1c39 ;
+    }
+}
+
+*/
+.container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin-top: 50px;
+}
+
+.card {
+    flex: 1; 
+    max-width: 250px; 
+    margin: 10px; 
+    height: 350px;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 100%; 
+    border-radius: 20px;
+    transition: transform 0.5s ease; 
+}
+
+.intro {
+    height: 0;
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    background: rgba(27, 27, 27, 0.5);
+    color: whitesmoke;
+    border-radius: 26px;
+    overflow: hidden;
+    transition: height 0.5s ease, background 0.5s ease, color 0.5s ease;
+}
+
+.intro h1 {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.intro p {
+    margin: 10px;
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card:hover .intro {
+    height: 75%;
+    background:#213555;
+    color: lightgray;
+}
+
+.card:hover p {
+    opacity: 1;
+    visibility: visible;
+}
+
+.card:hover img {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+
+
+.box {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    max-width: 20px ;
+    max-height: 30px;
+    margin-right: 0 auto;
+    margin-bottom: 0 auto;
+    margin-left: 50%;
+    padding: 10px;
+    background: lightgray;
+    border-radius: 40px;
+    box-shadow: 5px 5px 10px #0c1c39;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin-top: 50px;
+    align-items: center;
+    align-content: center;
+}
+
+.box:hover {
+    max-width: 50%;
+    margin-right: 0 auto;
+    margin-bottom: 0 auto;
+    margin-left: 24%;
+}
+
+.box input {
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    transition: width 0.8s ease-in-out;
+    /* Adjust timing */
+    background: transparent;
+    margin-left: 10px;
+    /* Add spacing between icon and input */
+}
+
+.box:hover input {
+    width: 100%;
+    /* Expand the input */
+}
+
+.box input::placeholder {
+    color: #374b6c;
+}
+
+.box i {
+    color: #213555;
+    font-size: 20px;
+    position: relative;
+    align-items: center;
+    align-content: center;
+    transition: transform 0.08s;
+    /* Add a subtle hover effect */
+}
+
+.box:hover i {
+    transform: scale(1.2);
+    /* Increase the icon size on hover */
+
+}
+/* Base styles for larger screens */
+.nextPageButton ul {
+    position: relative;
+    background: lightgray;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    float: left;
+    width: 350px;
+    padding: 20px;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    color: #213555;
+    text-align: center;
+    font-weight: bolder;
+    margin-left: 35%;
+   
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.nextPageButton ul li {
+    display: inline-block;
+    margin-right: 10px;
+    list-style: none;
+    line-height: 50px;
+    margin: 0 5px;
+}
+
+.nextPageButton ul .pageNum li {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    
+    text-align: center;
+}
+
+.nextPageButton ul li a {
+    display: block;
+    text-decoration: none;
+    color: #213555;
+    font-family: 'Times New Roman', Times, serif;
+}
+.nextPageButton:hover ul li a {
+    display: block;
+    text-decoration: none;
+    color: lightgray;
+    
+}
+.nextPageButton:hover ul {
+    background: #213555;
+}
+.nextPageButton ul li:hover{
+    background: #0c1c39;
+    border-radius: 5px; 
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .nextPageButton{
+        padding-top: 200px;
+    }
+    
+    .nextPageButton ul {
+        width: 100%; /* Adjust the width to 100% for smaller screens */
+        margin-left:25%;
+       
+      
+    }
+
+    .nextPageButton ul li {
+        display: block; /* Display list items vertically on smaller screens */
+        text-align: center; /* Center-align list items on smaller screens */
+        margin-bottom: 10px; /* Add spacing between list items on smaller screens */
+    }
+    .nextPageButton:hover ul li a {
+        display: block;
+        text-decoration: none;
+        color: lightgray;
+        
+    }
+    .nextPageButton:hover ul {
+        background: #213555;
+    }
+    .nextPageButton ul li:hover{
+        background: #0c1c39;
+        border-radius: 5px; 
+    }
+}
+
+
+
+footer {
+    height: 350px;
+    width: 100%;
+    background: lightgray;
+    box-shadow: #0c1c39 5px 5px 8px 8px;
+    display: inline-block;
+    justify-content: center;
+    border-radius: 20px;
+
+}
+.H2Detail{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-left: 40.3%;
+    text-shadow: #4b6979 5px 5px 10px;
+}
+.aboutWeb{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    margin-left: 30%;
+}
+.SecParagraph{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    margin-left: 12%;
+}
+.ThirdSecParagraph{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    margin-left: 17%;
+}
+.warpper {
+    margin-top: 3%;
+    margin-left: 39%;
+}
+
+.warpper .button {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 0 5px;
+    background: linear-gradient(to left, #0c1c39, #4b6979, #374b6c);;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 8PX 8PX 15PX rgba(0, 0, 0, 1);
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+}
+
+.warpper .button:hover {
+    width: 200px;
+
+}
+
+.warpper .button .SocialIcon {
+    display: inline-block;
+    height: 60px;
+    text-align: center;
+    width: 60px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    overflow: visible;
+    transition: all 0.3s ease-out;
+}
+
+.warpper .button:nth-child(1):hover .SocialIcon {
+    background: blue;
+}
+
+.warpper .button:nth-child(2):hover .SocialIcon {
+    background: linear-gradient(0deg, #bc2a8d, #8a3ab9);
+}
+
+.warpper .button:nth-child(3):hover .SocialIcon {
+    background: black;
+}
+
+.warpper .button:nth-child(4):hover .SocialIcon {
+    background: green;
+}
+
+.warpper .button:hover .SocialIcon i {
+    color: #ffff;
+}
+
+.warpper .button .SocialIcon i {
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+    color: #ECF2FF;
+}
+
+.warpper .button .SocialIcon i {
+    font-size: 25px;
+    line-height: 60px;
+    color: #ECF2FF;
+    margin-left: 20px;
+}
+
+.warpper .button span {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    color: #F0F0F0;
+    padding-left: 30px;
+    transition: all 0.3s ease-out;
+
+
+}
+
+.warpper .button:nth-child(1) span {
+    color: lightgray;
+    font-weight: 800;
+}
+
+.warpper .button:nth-child(2) span {
+    color:  lightgray;
+    font-weight: 800;
+}
+
+.warpper .button:nth-child(3) span {
+    color:  lightgray;
+    font-weight: 800;
+}
+
+.warpper .button:nth-child(4) span {
+    color:  lightgray;
+    font-weight: 800;
+}
+.footerEmail{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    margin-left: 8.26%;
+    margin-top: 4%;
+    color: black;
+    font-size: 15px;
+}
+.footerEmail:hover{
+    color: #4b6979;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="movies" content="Movies for every one !">
+    <link rel="stylesheet" href="subscribe.css">
+    <link rel="sortcut icon" type="image/png" href="img/video.png">
+    
+    <title>Movies</title>
+    
+</head>
+
+<body>
+    <!--first page (sign in and log in )-->
+    <div class="intro">
+        <input id="chkbox" type="checkbox" aria-hidden="true" autofocus>
+        <div class=" signup">
+            <form method="post">
+                <label class="main" for="chkbox" aria-hidden="true"> SignUp</label>
+                <input type="text" name=" txt" placeholder="User name" required>
+                <input type="email" name=" email" placeholder="Email" required>
+                <input type="password" name=" password" placeholder="Password" minlength="8" maxlength="20" required>
+                <button>SignUp</button>
+            </form>
+        </div>
+        <div class="login">
+            <form method="post">
+                <label class="main" for="chkbox" aria-hidden="true">Login</label>
+                <input type="email" name=" email" placeholder="Email" required>
+                <input type="password" name=" password" placeholder="Password" required>
+                <!--<label class="repass" > Forgert Password ? </label>-->
+                <button>Login</button>
+            </form>
+
+        </div>
+
+    </div>
+    
+</body>
+
+</html>

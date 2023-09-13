@@ -1,0 +1,128 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost' , sans-serif;
+    background : linear-gradient(to bottom , #0c1c36 , #4b6979 , #374b6c);
+}
+.intro{
+    width: 350px;
+    height: 500px ;
+    overflow: hidden;
+    background-color: #4b6979;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #0c1c36;
+
+
+}
+#chkbox{
+    display: none;
+}
+.signup{
+ position: relative;
+ width: 100%;
+ height: 100%;
+}
+
+.main{
+    color: #F0F0F0;
+    font-size: 2.0cm;
+    justify-content: center;
+    display: flex;
+    margin:60px ;
+    font-weight: bold ;
+    cursor: pointer;
+    transition: .5s ease-in-out ;
+}
+input{
+    display: flex;
+    width: 60%;
+    height: 20%;
+    background: #F0F0F0;
+    margin: 20px auto 0;
+    padding: 10px;
+    border: #0c1c36 ;
+    border-radius: 5px;
+    outline: none;
+    color: #0c1c36;
+
+}
+/*.resetPassLabel{
+    height: 15px;
+   
+}
+#resetPass{
+    font-size: 13px;
+    padding-left: 90px;
+    display: flex;
+    padding-bottom: 90px;
+    height: 15px;
+    justify-content: end;
+
+}*/
+button{
+    width: 60%;
+    height: 40px;
+    margin: 10px auto 0;
+    justify-content: center;
+    display: block;
+    color: #F0F0F0;
+    background-color: #0c1c36;
+    border-radius: 5px;
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+.repass{
+    height: 15;
+    font-size: 13;
+    
+}
+button:hover{
+    background-color: #F0F0F0;
+    color: #0c1c36;
+    border: #0c1c36;
+}
+.login{
+    height: 460px;
+    background: #F0F0F0;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
+}
+.login  input{
+    background:#4b6979 ;
+    color: #F0F0F0;
+}    
+.login input::placeholder {
+    color: #F0F0F0;
+}
+.signup input::placeholder {
+    color: #4b6979;
+}
+
+.login label{
+    color: #4b6979;
+    font-size: 2.0cm;
+    justify-content: center;
+    display: flex;
+    margin:60px ;
+    font-weight: bold ;
+    transform: scale(.6);
+}
+#chkbox:checked ~ .login{
+transform: translateY(-500px);
+}
+#chkbox:checked ~ .login label{
+    transform: scale(1);
+}
+#chkbox:checked ~ .signup label{
+    transform: scale(.6 );
+}
