@@ -41,7 +41,7 @@ nav li a {
     color: #213555;
     text-align: center;
     font-weight: bolder;
-    margin-left: 95px;
+    margin-left: 0 auto;
     font-size: 20px;
 }
 
@@ -154,9 +154,10 @@ li a:hover {
 */
 .container {
     display: flex;
-    flex-wrap: wrap; 
+    flex-direction: row; 
     justify-content: center; 
     margin-top: 50px;
+    flex-flow: wrap;
 }
 
 .card {
@@ -165,15 +166,15 @@ li a:hover {
     margin: 10px; 
     height: 350px;
     box-shadow: 5px 5px 10px black;
-    border-radius: 20px;
+    border-top-left-radius: 50px;
     overflow: hidden;
     position: relative;
-}
+}   
 
 .card img {
     width: 100%;
     height: 100%; 
-    border-radius: 20px;
+    border-top-left-radius: 50px;
     transition: transform 0.5s ease; 
 }
 
@@ -186,32 +187,93 @@ li a:hover {
     bottom: 0;
     background: rgba(27, 27, 27, 0.5);
     color: whitesmoke;
-    border-radius: 26px;
+    border-top-left-radius: 30px;
+    box-shadow: black  2px 10px 11px ;
     overflow: hidden;
     transition: height 0.5s ease, background 0.5s ease, color 0.5s ease;
 }
 
 .intro h1 {
-    margin: 10px;
-    font-size: 20px;
+    margin: 5px;
+    color: #213555;
+    text-shadow: white 3px 3px 10px;
+    font-size: 22px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
 }
 
 .intro p {
-    margin: 10px;
-    font-size: 14px;
+    margin: 3px;
+    font-size: 13px;
     opacity: 0;
     visibility: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
+.intro .rate {
+    text-align: center;
+}
+
+.rate p {
+    text-align: left;
+    margin-right: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    margin-top: 3px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+}
+
+.rate i {
+    color: rgb(218, 189, 4);
+    font-size: 18px;
+    cursor: pointer;
+
+}
+.rate span{
+    margin-top: 10px;
+}
+.checked{
+    color: rgb(218, 189, 4);
+}
+.typeOfMov{
+    margin-top: 25px;
+    margin-left: 5%;
+ 
+    
+}
+.typeOfMov label{
+ width: 60px;
+ padding-left: 4px;
+ font-size: 14px;
+ background: #0c1c39;
+ color: lightgray;
+ padding-right: 4px;
+ border-radius: 3px;
+ padding-top: 5px;
+ padding-bottom: 5px;
+ margin-left: 2px;
+ margin-right: 2px;
+ 
+}
+.typeOfMov label:hover{
+    background: white;
+    color: #0c1c39;
+}
 .card:hover {
     cursor: pointer;
+}
+.card:hover .rate{
+    visibility: inherit;
 }
 
 .card:hover .intro {
     height: 75%;
-    background:#213555;
-    color: lightgray;
+    background:lightgray;
+    color: black;
+    font-weight: 600;
 }
 
 .card:hover p {
@@ -220,10 +282,39 @@ li a:hover {
 }
 
 .card:hover img {
-    transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) ;
+    filter: blur(3PX);
 }
 
+@media screen and (max-width: 768px){
+    .card{
+        width: 360px;
+        height: 450px;
+        padding-right: 20px;
 
+    }
+    .card img {
+        width: 360px;
+        height: 450px; 
+    border-radius: 20px;
+    transition: transform 0.5s ease; 
+}
+}
+@media screen and (max-width: 1200px){
+    .card{
+        width: 360px;
+        height: 450px;
+       
+
+    }
+
+    .card img {
+    width: 100%px;
+    height: 450px; 
+    border-radius: 20px;
+    transition: transform 0.5s ease; 
+}
+}
 
 .box {
     display: flex; 
