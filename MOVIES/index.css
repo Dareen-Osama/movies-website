@@ -117,7 +117,7 @@ margin-right: 15px;
     flex: 1; 
     max-width: 250px; 
     margin: 10px; 
-    height: 350px;
+    height: 400px;
     box-shadow: 5px 5px 10px black;
     border-top-left-radius: 50px;
     overflow: hidden;
@@ -592,5 +592,26 @@ footer {
 .footerbarv{
 text-align: center ;
 
+
+}
+.watchButt{
+    text-align: center;
+}
+.watch{
+    margin-top: 16px; 
+    background:#E5D283;
+     color: black;
+      font-weight: bold;
+       border: none;
+       font-family: 'Times New Roman', Times, serif;
+       padding-bottom: 5px ;
+       padding-top: 5px ;
+       border-radius: 5px;
+       width: 80%;
+}
+.watch:hover{
+background: #0c1c39;
+color: lightgray;
+font-weight: bold;
 
 }
